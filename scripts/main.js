@@ -37,12 +37,10 @@ function mostrarDetalleSerie(index, series) {
     var imagen = document.getElementById("image");
     imagen.setAttribute("src", serie.image);
     var nombre = document.getElementById("name");
-    nombre.innerHTML = "".concat(serie.name);
+    nombre.innerHTML = "<h2 class=\"card-title\" id=\"name\">".concat(serie.name, "</h2>");
     var descripcion = document.getElementById("description");
-    descripcion.innerHTML = "".concat(serie.description);
+    descripcion.innerHTML = "<p class=\"card-text\" id=\"description\">".concat(serie.description, "</p>");
     var link = document.getElementById("url");
-    if (link) {
-        link.setAttribute("href", serie.url);
-    }
+    link.innerHTML = "<a id=\"url\" color: blue;>".concat(serie.url, "</a>");
     card.style["display"] = "unset";
 }

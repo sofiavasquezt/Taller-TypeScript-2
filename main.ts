@@ -44,13 +44,11 @@ function mostrarDetalleSerie(index: number, series: Serie[]): void {
     let imagen: HTMLElement = document.getElementById("image")!;
     imagen.setAttribute("src", serie.image);
     let nombre: HTMLElement = document.getElementById("name")!;
-    nombre.innerHTML= `${serie.name}`
+    nombre.innerHTML= `<h2 class="card-title" id="name">${serie.name}</h2>`
     let descripcion: HTMLElement = document.getElementById("description")!;
-    descripcion.innerHTML= `${serie.description}`
+    descripcion.innerHTML= `<p class="card-text" id="description">${serie.description}</p>`
     let link: HTMLElement = document.getElementById("url")!;
-    if (link) {
-        link.setAttribute("href", serie.url);
-    }
+    link.innerHTML = `<a id="url">${serie.url}</a>`
 
     card.style["display"] = "unset";
 }
